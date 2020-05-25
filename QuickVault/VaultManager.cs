@@ -18,9 +18,9 @@ namespace QuickVault
             string publicKey = rsa.ToXmlString(false);
             string privateKey = rsa.ToXmlString(true);
 
-            if (!updateExisting && _files.AlreadyExists)
+            if (!updateExisting && _files.AnyQuickVaultFileExists)
                 throw new InvalidOperationException("There is already QuickVault files here");
-            else if (updateExisting && _files.AlreadyExists)
+            if (updateExisting && _files.AnyQuickVaultFileExists)
                 UpdateVault(publicKey, privateKey, rsa);
             else
                 CreateVault(publicKey, privateKey);
@@ -53,20 +53,20 @@ namespace QuickVault
 
         private void UpdateVault(string publicKey, string privateKey, RSACryptoServiceProvider rsa)
         {
-            if(!_files.AllFilesExist)
-            {
-                _files.DeletePublicKeyFile();
-                _files.DeletePrivateKeyFile();
-                _files.DeleteQuickVault();
-                CreateVault(publicKey, privateKey);
-            }
-            else
+            if(_files.VaultExists && _files.PrivateKeyExists)
             {
                 var vault = _files.Load();
                 string oldPrivateKey = _files.LoadPrivateKey();
                 var oldRsa = new RSACryptoServiceProvider();
                 oldRsa.FromXmlString(oldPrivateKey);
                 CreateVault(publicKey, privateKey, Crypter.ReencryptVault(vault, oldRsa, rsa));
+            }
+            else
+            {
+                _files.DeletePublicKeyFile();
+                _files.DeletePrivateKeyFile();
+                _files.DeleteQuickVault();
+                CreateVault(publicKey, privateKey);
             }
         }
     }

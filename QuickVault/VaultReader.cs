@@ -29,5 +29,7 @@ namespace QuickVault
 
         public IEnumerable<string> Keys => _vault.Keys;
 
+        public bool PrivateKeyExists => _files.PrivateKeyExists;
+        public bool PublicKeyExists => _files.PublicKeyExists;
     }
 }

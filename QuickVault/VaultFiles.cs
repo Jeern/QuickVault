@@ -42,8 +42,11 @@ namespace QuickVault
                 File.Delete(file);
         }
 
-        internal bool AlreadyExists => File.Exists(VaultFullPath) || File.Exists(PrivateKeyFullPath) || File.Exists(PublicKeyFullPath);
-        internal bool AllFilesExist => File.Exists(VaultFullPath) && File.Exists(PrivateKeyFullPath);
+        internal bool VaultExists => File.Exists(VaultFullPath);
+        internal bool PrivateKeyExists => File.Exists(PrivateKeyFullPath);
+        internal bool PublicKeyExists => File.Exists(PublicKeyFullPath);
+
+        internal bool AnyQuickVaultFileExists => VaultExists || PrivateKeyExists || PublicKeyExists;
 
         internal void SavePrivateKey(string privateKey)
         {
