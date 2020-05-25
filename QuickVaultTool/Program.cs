@@ -80,7 +80,13 @@ namespace QuickVaultTool
 
         private static void PrintChoices(Dictionary<int, Choice>  choices, VaultReader reader, VaultManager manager)
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine("Please choose an numbered option (or 'q' to quit):");
+            foreach (var choicesKey in choices.Keys)
+            {
+                Console.WriteLine($"{choicesKey}. {choices[choicesKey]}");
+            }
+            Console.WriteLine();
         }
 
         private static bool Choose(Dictionary<int, Choice> choices, VaultReader reader, VaultManager manager)
@@ -95,7 +101,14 @@ namespace QuickVaultTool
             if(!choices.ContainsKey(intkey))
                 return Choose(choices, reader, manager);
 
-            choices[intkey].Action();
+            try
+            {
+                choices[intkey].Action(reader, manager);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"{choices[intkey].ErrorText}: {e.Message}");
+            }
             return true;
         }
 
