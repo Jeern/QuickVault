@@ -70,6 +70,8 @@ namespace QuickVault
 
         internal Vault Load()
         {
+            if(!File.Exists(VaultFullPath))
+                return new Vault();
             var f = new BinaryFormatter();
             using (var fs = new FileStream(VaultFullPath, FileMode.Open, FileAccess.Read, FileShare.None))
             {

@@ -17,8 +17,8 @@ namespace QuickVaultTool
                 Console.WriteLine("");
                 string folder = GetQuickVaultFolder(Directory.GetCurrentDirectory());
 
-                var reader = new VaultReader(folder);
                 var manager = new VaultManager(folder);
+                var reader = new VaultReader(folder);
 
                 MakeChoices(reader, manager);
             }
@@ -31,12 +31,6 @@ namespace QuickVaultTool
             Console.ReadLine();
 #endif
 
-            //var reader = new VaultReader();
-            //foreach (var key in reader.Keys)
-            //{
-            //    Console.WriteLine($"{key} = {reader[key]}");
-            //}
-            //Console.ReadLine();
         }
 
         private static void MakeChoices(VaultReader reader, VaultManager manager)
@@ -81,12 +75,11 @@ namespace QuickVaultTool
         private static void PrintChoices(Dictionary<int, Choice>  choices, VaultReader reader, VaultManager manager)
         {
             Console.WriteLine();
-            Console.WriteLine("Please choose an numbered option (or 'q' to quit):");
+            Console.WriteLine("Please choose a numbered option (i.e press the number or 'q' to quit):");
             foreach (var choicesKey in choices.Keys)
             {
-                Console.WriteLine($"{choicesKey}. {choices[choicesKey]}");
+                Console.WriteLine($"{choicesKey}. {choices[choicesKey].OutputText}");
             }
-            Console.WriteLine();
         }
 
         private static bool Choose(Dictionary<int, Choice> choices, VaultReader reader, VaultManager manager)
@@ -104,6 +97,7 @@ namespace QuickVaultTool
             try
             {
                 choices[intkey].Action(reader, manager);
+                Console.WriteLine($"{choices[intkey].OutputText}: Successful");
             }
             catch (Exception e)
             {

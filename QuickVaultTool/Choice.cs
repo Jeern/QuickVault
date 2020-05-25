@@ -53,9 +53,9 @@ namespace QuickVaultTool
 
         public static Choice SetNewValue = new Choice("Set new value", "Value could not be set", (r, m) =>
         {
-            Console.WriteLine("Enter key");
+            Console.WriteLine("Enter key:");
             string key = InputHelper.GetEnteredValue();
-            Console.WriteLine("Enter value");
+            Console.WriteLine("Enter value:");
             string value = InputHelper.GetEnteredValue();
             Console.WriteLine($"Are you sure you want to set {key} = {value}");
             Console.WriteLine("(Y/N)");
@@ -67,7 +67,7 @@ namespace QuickVaultTool
 
         public static Choice DeleteValue = new Choice("Delete value", "Value could not be deleted", (r, m) =>
         {
-            Console.WriteLine("Enter key");
+            Console.WriteLine("Enter key:");
             string key = InputHelper.GetEnteredValue();
             var value = r[key];
             Console.WriteLine($"Are you sure you want to delete {key} = {value}");
