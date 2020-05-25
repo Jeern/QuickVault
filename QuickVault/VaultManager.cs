@@ -37,6 +37,13 @@ namespace QuickVault
             _files.Save(vault);
         }
 
+        public void Delete(string key)
+        {
+            var vault = _files.Load();
+            vault.Delete(key);
+            _files.Save(vault);
+        }
+
         private void CreateVault(string publicKey, string privateKey, Vault vault = null)
         {
             _files.SavePrivateKey(privateKey);

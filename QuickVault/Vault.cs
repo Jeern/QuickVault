@@ -20,6 +20,14 @@ namespace QuickVault
             }
         }
 
+        internal void Delete(string key)
+        {
+            if (_content.ContainsKey(key))
+            {
+                _content.Remove(key);
+            }
+        }
+
         internal IEnumerable<string> Keys => _content.Keys;
 
         internal bool HasKey(string key) => _content.ContainsKey(key);
