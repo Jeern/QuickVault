@@ -8,6 +8,7 @@ namespace QuickVaultTool
     {
         public static string GetEnteredValue()
         {
+            Output.Flush();
             string value = null;
             do
             {

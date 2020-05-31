@@ -22,20 +22,20 @@ namespace QuickVaultTool
             "Keys/values could not be listed", (r, m) =>
             {
                 var keys = r.Keys.ToList();
-                Console.WriteLine($"{keys.Count} keys found:");
+                Output.WriteLine($"{keys.Count} keys found:", OutputType.Content);
                 foreach (var key in keys)
                 {
-                    Console.WriteLine($"{key}: {r[key]}");
+                    Output.WriteLine($"{key}: {r[key]}", OutputType.Content);
                 }
             });
 
         public static Choice ListKeysOnly = new Choice("List QuickVault keys", "Keys could not be listed", (r, m) =>
         {
             var keys = r.Keys.ToList();
-            Console.WriteLine($"{keys.Count} keys found:");
+            Output.WriteLine($"{keys.Count} keys found:", OutputType.Content);
             foreach (var key in keys)
             {
-                Console.WriteLine($"{key}: {r[key]}");
+                Output.WriteLine(key, OutputType.Content);
             }
         });
 
@@ -53,12 +53,12 @@ namespace QuickVaultTool
 
         public static Choice SetNewValue = new Choice("Set new value", "Value could not be set", (r, m) =>
         {
-            Console.WriteLine("Enter key:");
+            Output.Write("Enter key:", OutputType.Question);
             string key = InputHelper.GetEnteredValue();
-            Console.WriteLine("Enter value:");
+            Output.Write("Enter value:", OutputType.Question);
             string value = InputHelper.GetEnteredValue();
-            Console.WriteLine($"Are you sure you want to set {key} = {value}");
-            Console.WriteLine("(Y/N)");
+            Output.Write($"Are you sure you want to set {key} = {value} (Y/N)", OutputType.Question);
+            Output.Flush();
             if (Console.ReadKey(true).Key == ConsoleKey.Y)
             {
                 m.SetValue(key, value, Encoding.UTF8);
@@ -67,18 +67,18 @@ namespace QuickVaultTool
 
         public static Choice DeleteValue = new Choice("Delete value", "Value could not be deleted", (r, m) =>
         {
-            Console.WriteLine("Enter key:");
+            Output.Write("Enter key:", OutputType.Question);
             string key = InputHelper.GetEnteredValue();
             var value = r[key];
-            Console.WriteLine($"Are you sure you want to delete {key} = {value}");
-            Console.WriteLine("(Y/N)");
+            if(string.IsNullOrWhiteSpace(value))
+                Output.Write($"Are you sure you want to delete {key} (Y/N)", OutputType.Question);
+            else
+                Output.Write($"Are you sure you want to delete {key} = {value} (Y/N)", OutputType.Question);
+            Output.Flush();
             if (Console.ReadKey(true).Key == ConsoleKey.Y)
             {
                 m.Delete(key);
             }
         });
-
-
-
     }
 }
