@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using QuickVault.Configuration.Core;
 
 namespace QuickVault.Sample.WebSite.Core
 {
@@ -20,6 +21,7 @@ namespace QuickVault.Sample.WebSite.Core
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.ConfigureAppConfiguration((context, builder) => builder.AddQuickVault());
                     webBuilder.UseStartup<Startup>();
                 });
     }
