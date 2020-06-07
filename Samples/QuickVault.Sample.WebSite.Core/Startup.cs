@@ -46,8 +46,8 @@ namespace QuickVault.Sample.WebSite.Core
                     var demoConfig = app.ApplicationServices.GetService<IOptions<DemoConfig>>();
 
                     await context.Response.WriteAsync($"Demo Config:{Environment.NewLine}");
-                    await context.Response.WriteAsync($"{demoConfig?.Value.DemoProp1}{Environment.NewLine}");
-                    await context.Response.WriteAsync($"{demoConfig?.Value.DemoProp2}{Environment.NewLine}");
+                    await context.Response.WriteAsync($"DemoProp1: {demoConfig?.Value.DemoProp1}{Environment.NewLine}");
+                    await context.Response.WriteAsync($"DemoProp2: {demoConfig?.Value.DemoProp2}{Environment.NewLine}");
                 });
             });
         }
