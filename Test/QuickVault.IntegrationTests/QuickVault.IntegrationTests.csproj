@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuickVault\QuickVault.csproj" />
+    <ProjectReference Include="..\..\src\QuickVault\QuickVault.csproj" />
   </ItemGroup>
 
 </Project>

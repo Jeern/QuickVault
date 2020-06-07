@@ -3,26 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault", "QuickVault\QuickVault.csproj", "{05BD1E9B-4DF6-4B94-9418-A45DE4D6DA3B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8E3CBC07-2AC9-4A93-BE63-29CB1BD492E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.Configuration.Core", "QuickVault.Configuration.Core\QuickVault.Configuration.Core.csproj", "{3F4CBF21-D74B-486C-B33C-AE2FDAA8B816}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Configuration", "QuickVault.Configuration\QuickVault.Configuration.csproj", "{4F39F8A4-4D84-4AA3-885D-3C3134A3549D}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVaultTool", "QuickVaultTool\QuickVaultTool.csproj", "{CB6C3233-01FA-4AA7-BDD1-B88380D06FA8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.Website", "QuickVault.Sample.Website\QuickVault.Sample.Website.csproj", "{784407B9-65A2-4769-BFC5-AAFD763DDE03}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.Sample.WebSite.Core", "QuickVault.Sample.WebSite.Core\QuickVault.Sample.WebSite.Core.csproj", "{6FB0ABD5-3B34-49A9-8D20-41758AB7A65E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.ConsoleApp", "QuickVault.Sample.Console\QuickVault.Sample.ConsoleApp.csproj", "{05996D1F-91C9-4110-A93C-9A3636A9D79F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.IntegrationTests", "QuickVault.IntegrationTests\QuickVault.IntegrationTests.csproj", "{5B89CD40-1EEF-466E-85D5-336B1DDC7ABC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{368A0E55-4C4C-4503-96CA-0F46470848C1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{DC98ABC8-4920-4D2E-BCED-58ADF5F26A42}"
 	ProjectSection(SolutionItems) = preProject
-		Common\CommonAssemblyInfo.cs = Common\CommonAssemblyInfo.cs
+		src\Common\CommonAssemblyInfo.cs = src\Common\CommonAssemblyInfo.cs
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F61BB375-2791-4CB1-8C81-4463F6204907}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tool", "Tool", "{818D3AF8-3638-4255-B942-71055D2D7FDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{AF4F228E-12D8-4FD2-B8AE-F302FA2FCD9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault", "src\QuickVault\QuickVault.csproj", "{2AF4DF87-3C78-4675-AA89-B31AAEE32AFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Configuration", "src\QuickVault.Configuration\QuickVault.Configuration.csproj", "{4F39F8A4-4D84-4AA3-885D-3C3134A3549D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.Configuration.Core", "src\QuickVault.Configuration.Core\QuickVault.Configuration.Core.csproj", "{8C4F35A6-B937-4F4E-819F-04218BAD09D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.IntegrationTests", "Test\QuickVault.IntegrationTests\QuickVault.IntegrationTests.csproj", "{E24D137B-0D9E-4DE2-86D6-6694334740D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVaultTool", "Tool\QuickVaultTool\QuickVaultTool.csproj", "{2562DE1C-A382-4953-8DDB-970B88A18749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.ConsoleApp", "Samples\QuickVault.Sample.Console\QuickVault.Sample.ConsoleApp.csproj", "{05996D1F-91C9-4110-A93C-9A3636A9D79F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.Website", "Samples\QuickVault.Sample.Website\QuickVault.Sample.Website.csproj", "{784407B9-65A2-4769-BFC5-AAFD763DDE03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.Sample.WebSite.Core", "Samples\QuickVault.Sample.WebSite.Core\QuickVault.Sample.WebSite.Core.csproj", "{877F2D55-8800-44EF-A352-85A9F8676A8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,41 +38,52 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{05BD1E9B-4DF6-4B94-9418-A45DE4D6DA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05BD1E9B-4DF6-4B94-9418-A45DE4D6DA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05BD1E9B-4DF6-4B94-9418-A45DE4D6DA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05BD1E9B-4DF6-4B94-9418-A45DE4D6DA3B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F4CBF21-D74B-486C-B33C-AE2FDAA8B816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F4CBF21-D74B-486C-B33C-AE2FDAA8B816}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F4CBF21-D74B-486C-B33C-AE2FDAA8B816}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F4CBF21-D74B-486C-B33C-AE2FDAA8B816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF4DF87-3C78-4675-AA89-B31AAEE32AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF4DF87-3C78-4675-AA89-B31AAEE32AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF4DF87-3C78-4675-AA89-B31AAEE32AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF4DF87-3C78-4675-AA89-B31AAEE32AFB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F39F8A4-4D84-4AA3-885D-3C3134A3549D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F39F8A4-4D84-4AA3-885D-3C3134A3549D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F39F8A4-4D84-4AA3-885D-3C3134A3549D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F39F8A4-4D84-4AA3-885D-3C3134A3549D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CB6C3233-01FA-4AA7-BDD1-B88380D06FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CB6C3233-01FA-4AA7-BDD1-B88380D06FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CB6C3233-01FA-4AA7-BDD1-B88380D06FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CB6C3233-01FA-4AA7-BDD1-B88380D06FA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6FB0ABD5-3B34-49A9-8D20-41758AB7A65E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FB0ABD5-3B34-49A9-8D20-41758AB7A65E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FB0ABD5-3B34-49A9-8D20-41758AB7A65E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FB0ABD5-3B34-49A9-8D20-41758AB7A65E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4F35A6-B937-4F4E-819F-04218BAD09D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4F35A6-B937-4F4E-819F-04218BAD09D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4F35A6-B937-4F4E-819F-04218BAD09D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4F35A6-B937-4F4E-819F-04218BAD09D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24D137B-0D9E-4DE2-86D6-6694334740D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24D137B-0D9E-4DE2-86D6-6694334740D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24D137B-0D9E-4DE2-86D6-6694334740D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24D137B-0D9E-4DE2-86D6-6694334740D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2562DE1C-A382-4953-8DDB-970B88A18749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2562DE1C-A382-4953-8DDB-970B88A18749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2562DE1C-A382-4953-8DDB-970B88A18749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2562DE1C-A382-4953-8DDB-970B88A18749}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05996D1F-91C9-4110-A93C-9A3636A9D79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05996D1F-91C9-4110-A93C-9A3636A9D79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05996D1F-91C9-4110-A93C-9A3636A9D79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05996D1F-91C9-4110-A93C-9A3636A9D79F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B89CD40-1EEF-466E-85D5-336B1DDC7ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B89CD40-1EEF-466E-85D5-336B1DDC7ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B89CD40-1EEF-466E-85D5-336B1DDC7ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B89CD40-1EEF-466E-85D5-336B1DDC7ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784407B9-65A2-4769-BFC5-AAFD763DDE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877F2D55-8800-44EF-A352-85A9F8676A8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877F2D55-8800-44EF-A352-85A9F8676A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877F2D55-8800-44EF-A352-85A9F8676A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877F2D55-8800-44EF-A352-85A9F8676A8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC98ABC8-4920-4D2E-BCED-58ADF5F26A42} = {8E3CBC07-2AC9-4A93-BE63-29CB1BD492E0}
+		{2AF4DF87-3C78-4675-AA89-B31AAEE32AFB} = {8E3CBC07-2AC9-4A93-BE63-29CB1BD492E0}
+		{4F39F8A4-4D84-4AA3-885D-3C3134A3549D} = {8E3CBC07-2AC9-4A93-BE63-29CB1BD492E0}
+		{8C4F35A6-B937-4F4E-819F-04218BAD09D5} = {8E3CBC07-2AC9-4A93-BE63-29CB1BD492E0}
+		{E24D137B-0D9E-4DE2-86D6-6694334740D5} = {AF4F228E-12D8-4FD2-B8AE-F302FA2FCD9F}
+		{2562DE1C-A382-4953-8DDB-970B88A18749} = {818D3AF8-3638-4255-B942-71055D2D7FDE}
+		{05996D1F-91C9-4110-A93C-9A3636A9D79F} = {F61BB375-2791-4CB1-8C81-4463F6204907}
+		{784407B9-65A2-4769-BFC5-AAFD763DDE03} = {F61BB375-2791-4CB1-8C81-4463F6204907}
+		{877F2D55-8800-44EF-A352-85A9F8676A8D} = {F61BB375-2791-4CB1-8C81-4463F6204907}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4C7F3F7-4D80-40E0-96BF-C33AE9E317F2}

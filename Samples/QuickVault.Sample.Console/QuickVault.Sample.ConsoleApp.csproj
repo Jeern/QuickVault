@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Common\CommonAssemblyInfo.cs">
+    <Compile Include="..\..\src\Common\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
@@ -63,7 +63,7 @@
     <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\QuickVault.Configuration\QuickVault.Configuration.csproj">
+    <ProjectReference Include="..\..\src\QuickVault.Configuration\QuickVault.Configuration.csproj">
       <Project>{4f39f8a4-4d84-4aa3-885d-3c3134a3549d}</Project>
       <Name>QuickVault.Configuration</Name>
     </ProjectReference>

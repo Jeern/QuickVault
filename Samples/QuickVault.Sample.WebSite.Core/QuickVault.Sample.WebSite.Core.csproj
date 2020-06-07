@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuickVault.Configuration.Core\QuickVault.Configuration.Core.csproj" />
+    <ProjectReference Include="..\..\src\QuickVault.Configuration.Core\QuickVault.Configuration.Core.csproj" />
   </ItemGroup>
 
 </Project>

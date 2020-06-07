@@ -11,8 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuickVault.Configuration\QuickVault.Configuration.csproj" />
-    <ProjectReference Include="..\QuickVault\QuickVault.csproj" />
+    <ProjectReference Include="..\..\src\QuickVault.Configuration\QuickVault.Configuration.csproj" />
+    <ProjectReference Include="..\..\src\QuickVault\QuickVault.csproj" />
   </ItemGroup>
 
 </Project>
