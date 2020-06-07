@@ -109,15 +109,9 @@
   <ItemGroup>
     <Content Include="Index.cshtml" />
     <None Include="packages.config" />
-    <Content Include="QuickVault.bin">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="QuickVault.priv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="QuickVault.pub">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="QuickVault.bin" />
+    <Content Include="QuickVault.priv" />
+    <Content Include="QuickVault.pub" />
     <Content Include="Readme.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

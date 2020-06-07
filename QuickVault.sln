@@ -13,11 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVaultTool", "QuickVaul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.Website", "QuickVault.Sample.Website\QuickVault.Sample.Website.csproj", "{784407B9-65A2-4769-BFC5-AAFD763DDE03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.WebSite.Core", "QuickVault.Sample.WebSite.Core\QuickVault.Sample.WebSite.Core.csproj", "{6FB0ABD5-3B34-49A9-8D20-41758AB7A65E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.Sample.WebSite.Core", "QuickVault.Sample.WebSite.Core\QuickVault.Sample.WebSite.Core.csproj", "{6FB0ABD5-3B34-49A9-8D20-41758AB7A65E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.Console", "QuickVault.Sample.Console\QuickVault.Sample.Console.csproj", "{05996D1F-91C9-4110-A93C-9A3636A9D79F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.Sample.ConsoleApp", "QuickVault.Sample.Console\QuickVault.Sample.ConsoleApp.csproj", "{05996D1F-91C9-4110-A93C-9A3636A9D79F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickVault.IntegrationTests", "QuickVault.IntegrationTests\QuickVault.IntegrationTests.csproj", "{5B89CD40-1EEF-466E-85D5-336B1DDC7ABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickVault.IntegrationTests", "QuickVault.IntegrationTests\QuickVault.IntegrationTests.csproj", "{5B89CD40-1EEF-466E-85D5-336B1DDC7ABC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{368A0E55-4C4C-4503-96CA-0F46470848C1}"
 	ProjectSection(SolutionItems) = preProject
