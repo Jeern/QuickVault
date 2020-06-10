@@ -7,10 +7,7 @@ namespace QuickVault.IntegrationTests
     public class ManagerTests
     {
         private string GetFolder(string subFolder) =>
-            Path.Combine(Directory.GetCurrentDirectory(), "Manager", subFolder);
-
-        private string GenerateValue() =>
-            Guid.NewGuid().ToString("N").Substring(0, 5);
+            TestHelper.GetFolder("Manager", subFolder);
 
         [Fact]
         public void Can_create_keyfiles()
@@ -36,8 +33,8 @@ namespace QuickVault.IntegrationTests
             var folder = GetFolder("SetKey");
             var manager = new VaultManager(folder);
             manager.CreateKeyFiles(true);
-            string key = GenerateValue();
-            string value = GenerateValue();
+            string key = TestHelper.GenerateValue();
+            string value = TestHelper.GenerateValue();
 
             manager.SetValue(key, value);
 
@@ -51,8 +48,8 @@ namespace QuickVault.IntegrationTests
             var folder = GetFolder("DeleteKey");
             var manager = new VaultManager(folder);
             manager.CreateKeyFiles(true);
-            string key = GenerateValue();
-            string value = GenerateValue();
+            string key = TestHelper.GenerateValue();
+            string value = TestHelper.GenerateValue();
             manager.SetValue(key, value);
 
             manager.Delete(key);
