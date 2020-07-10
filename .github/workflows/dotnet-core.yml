@@ -20,8 +20,8 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build Tool
-      run: dotnet build /home/runner/work/QuickVault/QuickVault/Tool/QuickVaultTool\QuickVaultTool.csproj --configuration Release --no-restore
+      run: dotnet build /home/runner/work/QuickVault/QuickVault/Tool/QuickVaultTool/QuickVaultTool.csproj --configuration Release --no-restore
     - name: Build Sample.WebSite.Core
-      run: dotnet build /home/runner/work/QuickVault/QuickVault/Samples/QuickVault.Sample.WebSite.Core\QuickVault.Sample.WebSite.Core.csproj --configuration Release --no-restore
+      run: dotnet build ./Samples/QuickVault.Sample.WebSite.Core/QuickVault.Sample.WebSite.Core.csproj --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
