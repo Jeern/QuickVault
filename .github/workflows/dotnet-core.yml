@@ -19,7 +19,9 @@ jobs:
         dotnet-version: 3.1.101
     - name: Install dependencies
       run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
+    - name: Build Tool
+      run: dotnet build Tool\QuickVaultTool\QuickVaultTool.csproj --configuration Release --no-restore
+    - name: Build Sample.WebSite.Core
+      run: dotnet build Samples\QuickVault.Sample.WebSite.Core\QuickVault.Sample.WebSite.Core.csproj --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
