@@ -34,7 +34,7 @@ app.config or web.config - this is also published as a nuget package (soon)
 1. [QuickVault.Configuration.Core](src/QuickVault.Configuration.Core/Readme.md) - functionality for having secrets in an appsettings.json file - this is also 
 published as a nuget package (soon)
 1. [QuickVaulTool](Tool/QuickVaultTool/Readme.md) - A ConsoleApp for generating and regenerating keys, the QuickVault.bin file etc.
-1. [QuickVault.IntegrationsTest](Test/QuickVault.IntegrationsTest/Readme.md) - The test suite that runs when pushing to master
+1. [QuickVault.IntegrationsTests](Test/QuickVault.IntegrationsTests/Readme.md) - The test suite that runs when pushing to master
 1. [QuickVault.Sample.ConsoleApp](Samples/QuickVault.Sample.ConsoleApp/Readme.md) - A ConsoleApp that demos use of secrets in an app.config
 1. [QuickVault.Sample.Website](Samples/QuickVault.Sample.Website/Readme.md) - A Website that demos use of secrets in a web.config
 1. [QuickVault.Sample.Website.Core](Samples/QuickVault.Sample.Website.Core/Readme.md) - A Website that demos use of secrets in appsettings.json
