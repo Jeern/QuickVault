@@ -35,9 +35,9 @@ app.config or web.config - this is also published as a nuget package (soon)
 published as a nuget package (soon)
 1. [QuickVaulTool](Tool/QuickVaultTool/Readme.md) - A ConsoleApp for generating and regenerating keys, the QuickVault.bin file etc.
 1. [QuickVault.IntegrationsTest](Test/QuickVault.IntegrationsTest/Readme.md) - The test suite that runs when pushing to master
-1. [QuickVault.Sample.ConsoleApp](Sample/QuickVault.Sample.ConsoleApp/Readme.md) - A ConsoleApp that demos use of secrets in an app.config
-1. [QuickVault.Sample.Website](Sample/QuickVault.Sample.Website/Readme.md) - A Website that demos use of secrets in a web.config
-1. [QuickVault.Sample.Website.Core](Sample/QuickVault.Sample.Website.Core/Readme.md) - A Website that demos use of secrets in appsettings.json
+1. [QuickVault.Sample.ConsoleApp](Samples/QuickVault.Sample.ConsoleApp/Readme.md) - A ConsoleApp that demos use of secrets in an app.config
+1. [QuickVault.Sample.Website](Samples/QuickVault.Sample.Website/Readme.md) - A Website that demos use of secrets in a web.config
+1. [QuickVault.Sample.Website.Core](Samples/QuickVault.Sample.Website.Core/Readme.md) - A Website that demos use of secrets in appsettings.json
 
 The three samples all contains the QuickVault.priv file - this is just for demo'ing and as explained above 
 QuickVault.priv file for real secrets should never be committed to GIT.
