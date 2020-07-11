@@ -29,15 +29,15 @@ The code contains 8 projects
 
 1. [QuickVault](src/QuickVault/Readme.md) - the basic functionality in a .NET Standard dll and also 
 published as a nuget package (soon)
-1. QuickVault.Configuration - functionality for having secrets in appSettings and ConnectionStrings in an oldschool
+1. [QuickVault.Configuration](src/QuickVault.Configuration/Readme.md) - functionality for having secrets in appSettings and ConnectionStrings in an oldschool
 app.config or web.config - this is also published as a nuget package (soon)
-1. QuickVault.Configuration.Core - functionality for having secrets in an appsettings.json file - this is also 
+1. [QuickVault.Configuration.Core](src/QuickVault.Configuration.Core/Readme.md) - functionality for having secrets in an appsettings.json file - this is also 
 published as a nuget package (soon)
-1. QuickVaulTool - A ConsoleApp for generating and regenerating keys, the QuickVault.bin file etc.
-1. QuickVault.IntegrationsTest - The test suite that runs when pushing to master
-1. QuickVault.Sample.ConsoleApp - A ConsoleApp that demos use of secrets in an app.config
-1. QuickVault.Sample.Website - A Website that demos use of secrets in a web.config
-1. QuickVault.Sample.Website.Core - A Website that demos use of secrets in appsettings.json
+1. [QuickVaulTool](Tool/QuickVaultTool/Readme.md) - A ConsoleApp for generating and regenerating keys, the QuickVault.bin file etc.
+1. [QuickVault.IntegrationsTest](Test/QuickVault.IntegrationsTest/Readme.md) - The test suite that runs when pushing to master
+1. [QuickVault.Sample.ConsoleApp](Sample/QuickVault.Sample.ConsoleApp/Readme.md) - A ConsoleApp that demos use of secrets in an app.config
+1. [QuickVault.Sample.Website](Sample/QuickVault.Sample.Website/Readme.md) - A Website that demos use of secrets in a web.config
+1. [QuickVault.Sample.Website.Core](Sample/QuickVault.Sample.Website.Core/Readme.md) - A Website that demos use of secrets in appsettings.json
 
 The three samples all contains the QuickVault.priv file - this is just for demo'ing and as explained above 
 QuickVault.priv file for real secrets should never be committed to GIT.
