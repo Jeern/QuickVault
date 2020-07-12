@@ -25,3 +25,8 @@ jobs:
       run: dotnet build ./Samples/QuickVault.Sample.WebSite.Core --configuration Release --no-restore
     - name: Test
       run: dotnet test ./Test/QuickVault.IntegrationTests --no-restore --verbosity normal
+    - name: publish on version change
+      uses: rohith/publish-nuget@v2.2.1
+      with:
+        PROJECT_FILE_PATH: src/QuickVault/QuickVault.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
