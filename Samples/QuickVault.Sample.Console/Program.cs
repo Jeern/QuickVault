@@ -10,7 +10,7 @@ namespace QuickVault.Sample.ConsoleApp
         {
             try
             {
-                Console.WriteLine("Reading AppSettings");
+                Console.WriteLine("Reading <appSettings>");
                 Console.WriteLine("DemoProp1: {0}", QuickVaultConfigurationManager.AppSettings["DemoProp1"]);
                 Console.WriteLine("DemoProp2: {0}", QuickVaultConfigurationManager.AppSettings["DemoProp2"]);
             }
