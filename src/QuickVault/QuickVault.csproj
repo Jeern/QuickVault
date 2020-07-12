@@ -2,10 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RepositoryUrl>https://github.com/Jeern/QuickVault</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/Jeern/QuickVault</PackageProjectUrl>
-    <PackageLicenseExpression>https://licenses.nuget.org/MIT</PackageLicenseExpression>
-    <Version>0.9.0</Version>
     <Description>Basic QuickVault functionality</Description>
   </PropertyGroup>
 
