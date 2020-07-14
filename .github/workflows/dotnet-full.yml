@@ -22,16 +22,16 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
       env:
           working-directory: src/QuickVault.Configuration
-    - name: msbuild restore
+    - name: MSBuild restore
       run: msbuild -t:restore
       working-directory: src/QuickVault.Configuration
-    - name: msbuild build
+    - name: MSBuild build
       run: msbuild -t:build
       working-directory: src/QuickVault.Configuration
-    - name: Nuget Add Source
-      run: nuget sources Add -Name "nuget.org" 
+#    - name: Nuget Add Source
+#      run: nuget sources Add -Name "nuget.org" 
     - name: Nuget SetAPIKey
-      run: nuget setapikey ${{secrets.NUGET_API_KEY}} -Source "nuget.org"
+      run: nuget setapikey ${{secrets.NUGET_API_KEY}}
     - name: Publish the package to Nuget.org
-      run: nuget push bin\Release\*.nupkg -source "nuget.org"" -SkipDuplicate
+      run: nuget push bin\Release\*.nupkg -source https://api.nuget.org/v3/index.json -SkipDuplicate
       working-directory: src/QuickVault.Configuration
