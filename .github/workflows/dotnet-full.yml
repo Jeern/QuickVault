@@ -20,7 +20,8 @@ jobs:
         nuget-version: 'latest'
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
-      working-directory: src/QuickVault.Configuration
+      env:
+          working-directory: src/QuickVault.Configuration
     - name: msbuild restore
       run: msbuild -t:restore
       working-directory: src/QuickVault.Configuration
