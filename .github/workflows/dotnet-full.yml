@@ -1,0 +1,36 @@
+name: .NET Full
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Nuget
+    - uses: nuget/setup-nuget@v1.0.2
+      with:
+        nuget-api-key: ${{secrets.NUGET_API_KEY}}
+        nuget-version: 'latest'
+
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+      env:
+        working-directory: src/QuickVault.Configuration
+    - run: msbuild -t:restore
+      working-directory: src/QuickVault.Configuration
+    - run: msbuild -t:build
+      working-directory: src/QuickVault.Configuration
+    - name: Nuget Add Source
+      run: nuget sources Add -Name "nuget.org" 
+    - name: Nuget SetAPIKey
+      run: nuget setapikey ${{secrets.NUGET_API_KEY}} -Source "nuget.org"
+    - name: Publish the package to Nuget.org
+      working-directory: src/QuickVault.Configuration
+      run: nuget push bin\Debug\*.nupkg -source "nuget.org"" -SkipDuplicate

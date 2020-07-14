@@ -67,10 +67,6 @@
       <Project>{4f39f8a4-4d84-4aa3-885d-3c3134a3549d}</Project>
       <Name>QuickVault.Configuration</Name>
     </ProjectReference>
-    <ProjectReference Include="..\QuickVault\QuickVault.csproj">
-      <Project>{05bd1e9b-4df6-4b94-9418-a45de4d6da3b}</Project>
-      <Name>QuickVault</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
