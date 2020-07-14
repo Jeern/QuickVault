@@ -14,14 +14,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Setup Nuget
-    - uses: nuget/setup-nuget@v1.0.2
+      uses: nuget/setup-nuget@v1.0.2
       with:
         nuget-api-key: ${{secrets.NUGET_API_KEY}}
         nuget-version: 'latest'
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
-      env: 
-        working-directory: src/QuickVault.Configuration
+      working-directory: src/QuickVault.Configuration
     - name: msbuild restore
       run: msbuild -t:restore
       working-directory: src/QuickVault.Configuration
