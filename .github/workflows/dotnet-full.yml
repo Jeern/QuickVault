@@ -26,7 +26,7 @@ jobs:
       run: msbuild -t:restore
       working-directory: src/QuickVault.Configuration
     - name: MSBuild build
-      run: msbuild -t:build
+      run: msbuild -t:build -p:Configuration=Release
       working-directory: src/QuickVault.Configuration
 #    - name: Nuget Add Source
 #      run: nuget sources Add -Name "nuget.org" 
