@@ -18,7 +18,6 @@ jobs:
       with:
         nuget-api-key: ${{secrets.NUGET_API_KEY}}
         nuget-version: 'latest'
-
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
       env:
@@ -33,4 +32,4 @@ jobs:
       run: nuget setapikey ${{secrets.NUGET_API_KEY}} -Source "nuget.org"
     - name: Publish the package to Nuget.org
       working-directory: src/QuickVault.Configuration
-      run: nuget push bin\Debug\*.nupkg -source "nuget.org"" -SkipDuplicate
+      run: nuget push bin\Release\*.nupkg -source "nuget.org"" -SkipDuplicate
