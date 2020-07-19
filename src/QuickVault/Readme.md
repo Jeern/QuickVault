@@ -12,7 +12,7 @@ Install-Package QuickVault
 
 QuickVault consists of a reader and a manager api. The reader is all that is 
 used in a live website or similar and the manager is used to create and manipulate 
-the vault from a tool when builting the website. For instance the [QuickVaulTool](Tool/QuickVaultTool/Readme.md).
+the vault from a tool when builting the website. For instance the [QuickVaulTool](../../Tool/QuickVaultTool/Readme.md).
 
 There a 3 files involved in a QuickVault
 
