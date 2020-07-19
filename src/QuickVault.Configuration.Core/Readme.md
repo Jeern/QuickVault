@@ -20,7 +20,7 @@ After that you can use QuickVault configuration on top of the rest of your confi
                 });
 ```
 
-The concept is described in
+
 
 
 
