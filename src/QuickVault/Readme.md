@@ -18,7 +18,7 @@ There a 3 files involved in a QuickVault
 
 QuickVault.pub containing the public key used to encrypt the values of the vault. 
 
-QuickvVault.priv containing the private key used to decrypt the values in the QuickVault. This file is 
+QuickVault.priv containing the private key used to decrypt the values in the QuickVault. This file is 
 never added to source code. Its released to your website by copying it manually or in a similar way.
 
 And finally the vault itself QuickVault.bin containing the unencrypted keys (not to be confused with 
