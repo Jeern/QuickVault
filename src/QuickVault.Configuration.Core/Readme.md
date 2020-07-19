@@ -8,7 +8,7 @@ It can be installed with
 Install-Package QuickVault.Configuration.Core
 ```
 
-After that you can use QuickVault configuration on top of the rest of your configuration. The (easy of) use is demonstrated in the sample project (QuickVault.Sample.Website.Core)[../../Sample/QuickVault.Sample.Website.Core/Readme.md] in the (Program.cs)[../../Sample/QuickVault.Sample.Website.Core/Program.cs] file.
+After that you can use QuickVault configuration on top of the rest of your configuration. The (easy of) use is demonstrated in the sample project [QuickVault.Sample.Website.Core](../../Sample/QuickVault.Sample.Website.Core/Readme.md]) in the [Program.cs](../../Sample/QuickVault.Sample.Website.Core/Program.cs) file.
 
 ```csharp
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -21,6 +21,45 @@ After that you can use QuickVault configuration on top of the rest of your confi
 ```
 
 
+You use the same naming standard as for environment variables to overwrite appsettings.
 
+I.e this appsetting
 
+```json
+{
+	"Bad": {
+		"Boy": true
+	}
+}
+```
 
+You have to store as:
+
+```
+Bad__Boy = true
+```
+
+I.e this appsetting
+
+```json
+{
+	"Bad": {
+		"Boys": [
+			{
+				"Boy": true
+
+			}
+		]
+	}
+}
+```
+
+Will be stored as: 
+
+```
+Bad__Boys_0__Boy = true; 
+````
+
+```
+Bad__Boy = true
+```
