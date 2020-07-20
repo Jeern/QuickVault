@@ -2,7 +2,7 @@
 
 For configuration of a full .NET framework application (an ASP.NET, Winforms, WPF or Console App), QuickVault offers the QuickVault.Configuration package.
 
-It can be installed with 
+It can be installed with:
 
 ```
 Install-Package QuickVault.Configuration
