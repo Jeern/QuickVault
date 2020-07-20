@@ -8,7 +8,7 @@ It can be installed with
 Install-Package QuickVault.Configuration.Core
 ```
 
-After that you can use QuickVault configuration on top of the rest of your configuration. The (easy of) use is demonstrated in the sample project [QuickVault.Sample.Website.Core](../../Samples/QuickVault.Sample.Website.Core/Readme.md]) in the [Program.cs](../../Samples/QuickVault.Sample.Website.Core/Program.cs) file.
+After that you can use QuickVault configuration on top of the rest of your configuration. The (ease of) use is demonstrated in the sample project [QuickVault.Sample.Website.Core](../../Samples/QuickVault.Sample.Website.Core/Readme.md]) in the [Program.cs](../../Samples/QuickVault.Sample.Website.Core/Program.cs) file.
 
 ```csharp
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -57,7 +57,7 @@ I.e this appsetting
 Will be stored as: 
 
 ```
-Bad__Boys_0__Boy = true; 
+Bad__Boys__0__Boy = true; 
 ````
 
 ```
