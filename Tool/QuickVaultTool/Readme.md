@@ -1,11 +1,11 @@
 ﻿# QuickVaultTool
 
-Although a QuickVault can be managed by using the [VaultManager.cs](../../src/QuickVault/VaultManager.cs) and [VaultReader.cs](../../src/QuickVault/VaultReader.cs) class of the QuickVault.dll 
+Although a QuickVault can be managed by using the [VaultManager.cs](../../src/QuickVault/VaultManager.cs) and [VaultReader.cs](../../src/QuickVault/VaultReader.cs) classes of the QuickVault.dll 
 it is nice to have some tooling.
 
 Currently the only tool available is the ConsoleApp QuickVaultTool.
 
-When you start it the available options will be dependent on the existence of priv/public key.
+When you start it the available options will be dependent on the existence of a priv/public key in the QuickVault.priv and QuickVault.pub files.
 
 If none exists the only option is to create them, while if both exists you can manipulate them in all ways possible.
 
