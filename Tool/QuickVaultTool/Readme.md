@@ -1,6 +1,6 @@
 ﻿# QuickVaultTool
 
-Although a QuickVault can be managed by using the VaultManager and VaultReader class of the QuickVault.dll 
+Although a QuickVault can be managed by using the [VaultManager.cs](../../src/QuickVault/VaultManager.cs) and [VaultReader.cs](../../src/QuickVault/VaultReader.cs) class of the QuickVault.dll 
 it is nice to have some tooling.
 
 Currently the only tool available is the ConsoleApp QuickVaultTool.
