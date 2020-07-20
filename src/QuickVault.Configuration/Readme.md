@@ -1,6 +1,6 @@
-﻿# QuickVault.Configuration.Core
+﻿# QuickVault.Configuration
 
-For configuration of full .NET framework applications, QuickVault offers the QuickVault.Configuration package.
+For configuration of a full .NET framework application (an ASP.NET, Winforms, WPF or Console App), QuickVault offers the QuickVault.Configuration package.
 
 It can be installed with 
 
@@ -14,3 +14,5 @@ class that reads encrypted configuration values from the QuickVault and if they 
 just pipes all the rest of the requests to the regular ConfigurationManager. 
 
 Like the ConfigurationManager - QuickVaultConfigurationManager offers an AppSettings and a ConnectionStrings property.
+
+The values are read by using QuickVaultConfigurationManager.AppSettings["KeyName"] instead of the built in ConfigurationManager.AppSettings["KeyName"]. 
