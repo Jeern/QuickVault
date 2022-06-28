@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: 3.1.200
     - name: Install dependencies
       run: dotnet restore
     - name: Build Tool
@@ -26,13 +26,13 @@ jobs:
     - name: Test
       run: dotnet test ./Test/QuickVault.IntegrationTests --no-restore --verbosity normal
     - name: Publish QuickVault on version change
-      uses: rohith/publish-nuget@v2.2.1
+      uses: rohith/publish-nuget@v2.5.5
       with:
         PROJECT_FILE_PATH: src/QuickVault/QuickVault.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
         VERSION_FILE_PATH: Directory.Build.props
     - name: Publish QuickVault.Configuration.Core on version change
-      uses: rohith/publish-nuget@v2.2.1
+      uses: rohith/publish-nuget@v2.5.5
       with:
         PROJECT_FILE_PATH: src/QuickVault.Configuration.Core/QuickVault.Configuration.Core.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
