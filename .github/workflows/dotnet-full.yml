@@ -12,16 +12,14 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Setup Nuget
-      uses: nuget/setup-nuget@v1.0.6
+      uses: nuget/setup-nuget@v2
       with:
         nuget-api-key: ${{secrets.NUGET_API_KEY}}
         nuget-version: 'latest'
     - name: Setup MSBuild.exe
-      uses: warrenbuckley/Setup-MSBuild@v1
-      env:
-          working-directory: src/QuickVault.Configuration
+      uses: microsoft/setup-msbuild@v2
     - name: MSBuild restore
       run: msbuild -t:restore
       working-directory: src/QuickVault.Configuration
@@ -29,7 +27,7 @@ jobs:
       run: msbuild -t:build -p:Configuration=Release
       working-directory: src/QuickVault.Configuration
 #    - name: Nuget Add Source
-#      run: nuget sources Add -Name "nuget.org" 
+#      run: nuget sources Add -Name "nuget.org"
     - name: Nuget SetAPIKey
       run: nuget setapikey ${{secrets.NUGET_API_KEY}}
     - name: Publish the package to Nuget.org

@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 3.1.200
+        dotnet-version: '10.0.x'
     - name: Install dependencies
       run: dotnet restore
     - name: Build Tool
@@ -26,13 +26,13 @@ jobs:
     - name: Test
       run: dotnet test ./Test/QuickVault.IntegrationTests --no-restore --verbosity normal
     - name: Publish QuickVault on version change
-      uses: rohith/publish-nuget@v2.5.5
+      uses: alirezanet/publish-nuget@v3.1.0
       with:
         PROJECT_FILE_PATH: src/QuickVault/QuickVault.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
         VERSION_FILE_PATH: Directory.Build.props
     - name: Publish QuickVault.Configuration.Core on version change
-      uses: rohith/publish-nuget@v2.5.5
+      uses: alirezanet/publish-nuget@v3.1.0
       with:
         PROJECT_FILE_PATH: src/QuickVault.Configuration.Core/QuickVault.Configuration.Core.csproj
         NUGET_KEY: ${{secrets.NUGET_API_KEY}}
